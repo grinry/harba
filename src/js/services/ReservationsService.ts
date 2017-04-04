@@ -7,15 +7,6 @@ import moment = require("moment");
 @Injectable()
 export class ReservationsService {
 
-    // protected items: Reservation[] = [
-    //     { berth: new Berth('B', 4), price: new Price('EUR', 154.55), status: 'Pending', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 7.5 },
-    //     { berth: new Berth('BD', 4), price: new Price('EUR', 154.55), status: 'Manual', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 7.5 },
-    //     { berth: new Berth('A', 44), price: new Price('KRN', 154.55), status: 'Manual', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 16 },
-    //     { berth: new Berth('C', 4), price: new Price('EUR', 154.55), status: 'Pending', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 7.5 },
-    //     { berth: new Berth('V', 44), price: new Price('EUR', 154.55), status: 'Manual', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 7.5 },
-    //     { berth: new Berth('FD', 4), price: new Price('EUR', 154.55), status: 'Manual', arrival: '2017-06-05', departure: '2017-06-06', harbor: 'Good harbor', size: 7.5 },
-    // ];
-
     protected items: Reservation[] = [
         new Reservation(
             new Berth('B', 4),
