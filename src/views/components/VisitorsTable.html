@@ -1,0 +1,44 @@
+<div class="table-custom">
+    <header>
+        <h5>Current visitors</h5>
+        <button class="btn btn-secondary btn-sm" (click)="addItem()"><i class="fa fa-plus"></i></button>
+        <button class="btn btn-secondary btn-sm"><i class="fa fa-refresh"></i></button>
+    </header>
+    <table class="table-striped table table-hover table-condensed">
+        <thead>
+        <tr>
+            <th>Berth</th>
+            <th>
+                Boat
+                <small class="glyphicon glyphicon-chevron-down table-order"></small>
+            </th>
+            <th class="hidden-sm-down">Harbor</th>
+            <th class="hidden-sm-down">Captain</th>
+            <th>Departure</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of paginate">
+            <td>{{ item.berth }}</td>
+            <td>{{ item.boat }}</td>
+            <td class="hidden-sm-down">{{ item.harbor }}</td>
+            <td class="hidden-sm-down">{{ item.captain }}</td>
+            <td>{{ item.getDeparture() }}</td>
+            <td class="text-right">
+                <button class="btn btn-secondary btn-sm" (click)="showItem(item)"><i class="fa fa-eye"></i></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <footer>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item" *ngFor="let i of arr(pages).fill(1); let ind = index"
+                    [ngClass]="{'active': page == (ind + 1)}">
+                    <a href="#" class="page-link" (click)="setPage(ind + 1, $event)">{{ ind + 1 }}</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>

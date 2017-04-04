@@ -1,0 +1,26 @@
+.dashboard {
+  header {
+    margin: 20px 0;
+    line-height: 36px;
+    & h3 {
+      margin: 0;
+      display: inline-block;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: inherit;
+      position: relative;
+      top: 5px;
+      & span {
+        color: $secondary-header-color;
+        font-size: 20px;
+        line-height: inherit;
+      }
+    }
+
+    button {
+      &:first-of-type {
+        margin-left: 15px;
+      }
+    }
+  }
+}

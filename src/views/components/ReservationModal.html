@@ -1,0 +1,74 @@
+<div class="card text-center">
+    <div class="card-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Reservation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Boat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Sailor</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col text-left">
+                <label for="arrival">Arrival</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <input id="arrival" type="text" class="form-control" disabled [(ngModel)]="item.computed_arrival">
+                </div>
+            </div>
+            <div class="col text-left">
+                <label for="departure">Departure</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <input id="departure" type="text" class="form-control" disabled [(ngModel)]="item.computed_departure">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col text-left">
+                <label for="bridge">Bridge</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <input id="bridge" type="text" class="form-control" disabled [(ngModel)]="item.berth.bridge">
+                </div>
+            </div>
+            <div class="col text-left">
+                <label for="position">Position</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    <input id="position" type="text" class="form-control" disabled [(ngModel)]="item.berth.position">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col text-left">
+                <label for="harbor">Harbor</label>
+                <div class="input-group">
+                    <input id="harbor" type="text" class="form-control" disabled [(ngModel)]="item.harbor">
+                </div>
+            </div>
+            <div class="col text-left">
+                <label for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">{{ item.price.currency }}</span>
+                    <input id="price" type="text" class="form-control" disabled [(ngModel)]="item.price.amount">
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="margin-top-15 pull-right btn btn-secondary" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            Close
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,51 @@
+$table-bg: #fff;
+
+.table-custom {
+  background-color: $table-bg;
+
+  header {
+    padding: 15px;
+    & h5 {
+      position: relative;
+      top: 5px;
+      font-weight: 300;
+      font-size: 20px;
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+  & table {
+    border: none;
+    font-size: 12px;
+    margin-bottom: 0;
+    & .table-order {
+      cursor: pointer;
+      color: $secondary-header-color;
+    }
+
+    & tr {
+      & td, & th {
+        &:first-of-type {
+          padding-left: 15px;
+        }
+        &:last-of-type {
+          padding-right: 15px;
+        }
+      }
+      & td {
+        vertical-align: middle;
+        & .badge { font-size: 12px; font-weight: 400; }
+      }
+    }
+  }
+
+  & footer {
+    padding: 10px 15px;
+    border-top: 1px solid #DDDDDD;
+
+    & .pagination {
+      margin: 0;
+    }
+  }
+}
