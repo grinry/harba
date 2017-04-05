@@ -19,6 +19,7 @@ $table-bg: #fff;
     border: none;
     font-size: 12px;
     margin-bottom: 0;
+    table-layout: fixed;
     & .table-order {
       cursor: pointer;
       color: $secondary-header-color;
@@ -31,6 +32,12 @@ $table-bg: #fff;
         }
         &:last-of-type {
           padding-right: 15px;
+        }
+        &.actions {
+          &.min {
+            width: 59px;
+          }
+          width: 128px;
         }
       }
       & td {
@@ -48,4 +55,8 @@ $table-bg: #fff;
       margin: 0;
     }
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-md { display: none; }
 }

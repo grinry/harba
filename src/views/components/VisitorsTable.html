@@ -12,20 +12,20 @@
                 Boat
                 <small class="glyphicon glyphicon-chevron-down table-order"></small>
             </th>
-            <th class="hidden-sm-down">Harbor</th>
-            <th class="hidden-sm-down">Captain</th>
+            <th class="hidden-xs-down hidden-md">Harbor</th>
+            <th class="hidden-xs-down hidden-md">Captain</th>
             <th>Departure</th>
-            <th></th>
+            <th class="actions min"></th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let item of paginate">
             <td>{{ item.berth }}</td>
             <td>{{ item.boat }}</td>
-            <td class="hidden-sm-down">{{ item.harbor }}</td>
-            <td class="hidden-sm-down">{{ item.captain }}</td>
+            <td class="hidden-xs-down hidden-md">{{ item.harbor }}</td>
+            <td class="hidden-xs-down hidden-md">{{ item.captain }}</td>
             <td>{{ item.getDeparture() }}</td>
-            <td class="text-right">
+            <td class="text-right actions min">
                 <button class="btn btn-secondary btn-sm" (click)="showItem(item)"><i class="fa fa-eye"></i></button>
             </td>
         </tr>

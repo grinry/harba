@@ -12,10 +12,10 @@
                 Arrival
                 <small class="glyphicon glyphicon-chevron-down table-order"></small>
             </th>
-            <th class="hidden-sm-down">Departure</th>
-            <th class="hidden-sm-down">Size</th>
-            <th class="hidden-sm-down">Price</th>
-            <th></th>
+            <th class="hidden-xs-down">Departure</th>
+            <th class="hidden-xs-down hidden-md">Size</th>
+            <th class="hidden-xs-down hidden-md">Price</th>
+            <th class="actions"></th>
         </tr>
         </thead>
         <tbody>
@@ -26,10 +26,10 @@
                 </span>
             </td>
             <td>{{ item.getArrival() }}</td>
-            <td class="hidden-sm-down">{{ item.getDeparture() }}</td>
-            <td class="hidden-sm-down">{{ item.size }} m.</td>
-            <td class="hidden-sm-down">{{ item.price }}</td>
-            <td class="text-right">
+            <td class="hidden-xs-down">{{ item.getDeparture() }}</td>
+            <td class="hidden-xs-down hidden-md">{{ item.size }} m.</td>
+            <td class="hidden-xs-down hidden-md">{{ item.price }}</td>
+            <td class="text-right actions">
                 <span *ngIf="item.status == 'Pending'">
                     <button class="btn btn-success btn-sm" (click)="approve(item)"><i class="fa fa-check"></i></button>
                     <button class="btn btn-danger btn-sm" (click)="decline(item)"><i class="fa fa-close"></i></button>

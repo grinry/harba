@@ -13256,6 +13256,7 @@ a.text-gray-dark:hover {
 html,
 body {
   background-color: #EEEEEE;
+  box-sizing: border-box;
 }
 
 .dashboard header {
@@ -13304,6 +13305,7 @@ body {
   border: none;
   font-size: 12px;
   margin-bottom: 0;
+  table-layout: fixed;
 }
 
 .table-custom table .table-order {
@@ -13319,6 +13321,16 @@ body {
 .table-custom table tr td:last-of-type,
 .table-custom table tr th:last-of-type {
   padding-right: 15px;
+}
+
+.table-custom table tr td.actions,
+.table-custom table tr th.actions {
+  width: 128px;
+}
+
+.table-custom table tr td.actions.min,
+.table-custom table tr th.actions.min {
+  width: 59px;
 }
 
 .table-custom table tr td {
@@ -13337,6 +13349,12 @@ body {
 
 .table-custom footer .pagination {
   margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-md {
+    display: none;
+  }
 }
 
 .margin-top-15 {
